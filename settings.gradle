@@ -1,4 +1,4 @@
-rootProject.name = 'android-gradle-book-code'
+/* rootProject.name = 'android-gradle-book-code'
 //第一章项目例子定义
 include ':example02'
 project(':example02').projectDir = new File(rootDir, 'chapter01/example02')
@@ -109,3 +109,5 @@ include ':example131'
 project(':example131').projectDir = new File(rootDir, 'chapter13/example131')
 include ':example132'
 project(':example132').projectDir = new File(rootDir, 'chapter13/example132')
+
+*/

@@ -1,5 +1,12 @@
+ // 在使用一些第三方插件、编写任务构建脚本和引入第三方类库时，对构建脚本中需要用到的仓库定义会全局生效
 buildscript {
     repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/spring' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+        mavenCentral()
         jcenter()
     }
     dependencies {
@@ -7,7 +14,15 @@ buildscript {
     }
 }
 allprojects {
+    // 项目中依赖和基本插件的下载仓库定义，注意访问顺序
     repositories {
+        mavenLocal()
+        // 配置国内阿里仓库以加速访问
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/spring' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+        mavenCentral()
         jcenter()
     }
 }
